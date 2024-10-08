@@ -1,0 +1,133 @@
+@media only screen and (max-width: 1200px) {
+    section.hero h1 
+    {
+        font-size: 5em;
+    }
+    section.hero h3 
+    {
+        font-size: 1.8em;
+    }
+    section.hero .right > p
+    {
+        font-size: 1.2em;
+    }
+    section.why .card h3 
+    {
+        font-size: 1.4em !important;
+    }
+    section.why .card p
+    {
+        font-size: 0.9em !important;
+    }
+    .recorded-lessons .container-fluid .classes > div > div p 
+    {
+        font-size: 1.1em !important;
+    }
+    .recorded-lessons .recorded-footer > div:last-of-type h3 
+    {
+        font-size: 2em !important;
+    }
+    .recorded-lessons .recorded-footer > div:first-of-type ul li p 
+    {
+        font-size: 1.2em !important;
+    }
+    .recorded-lessons .recorded-footer > div:first-of-type ul li i 
+    {
+        width: 25px;
+        height: 25px;
+        font-size: 1em !important;
+    }
+    .private-lessons .right h2
+    {
+        font-size: 2em !important;
+    }
+    section#upcomming .meta-data li p 
+    {
+        font-size: 0.8em !important;
+    }
+    .footer .lattest-news h1 
+    {
+        font-size: 1.3em !important;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    section.hero h1 {
+        font-size: 4em;
+    }
+    section.hero h3 {
+        font-size: 1.4em;
+    }
+    section.hero .right > p {
+        font-size: 1em;
+    }
+    section.hero .icons {
+        gap: 1em !important;
+    }
+    section.why .card h3 {
+        font-size: 1.2em !important;
+    }
+    section.why .card p {
+        font-size: 0.7em !important;
+    }
+    .recorded-lessons .recorded-footer > div:last-of-type h3 {
+        font-size: 1.6em !important;
+    }
+    .recorded-lessons .recorded-footer > div:first-of-type ul li p {
+        font-size: 1.0em !important;
+    }
+    .recorded-lessons .recorded-footer > div:first-of-type ul li i {
+        width: 20px;
+        height: 20px;
+        font-size: 0.8em !important;
+    }
+    section.private-lessons .right ul li p {
+        font-size: 0.85em !important;
+    }
+}
+@media only screen and (max-width: 900px) {
+    section.hero h1 {
+        font-size: 3.5em;
+    }
+    section.hero h3 {
+        font-size: 1.2em;
+    }
+    section.hero .right > p {
+        font-size: 0.9em;
+    }
+    section.hero .icons {
+        gap: 0.7em !important;
+    }
+    section.hero div.icons a button p
+    {
+        font-size: 1.0rem !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    section.private-lessons .right ul li p {
+        font-size: 1em !important;
+    }
+    section.hero h1 {
+        font-size: 5em;
+    }
+    section.hero h3 {
+        font-size: 2.2em;
+    }
+    section.hero .right > p {
+        font-size: 1.3em;
+    }
+    section.hero div.icons a button p {
+        font-size: 1.4rem !important;
+    }
+    section.hero .icons {
+        gap: 2em !important;
+    }
+    section.why .card h3 {
+        font-size: 1.8em !important;
+    }
+    section.why .card p {
+        font-size: 1.2em !important;
+    }
+    .recorded-lessons .recorded-footer > div:first-of-type ul li p {
+        font-size: 1.2em !important;
+    }
+}

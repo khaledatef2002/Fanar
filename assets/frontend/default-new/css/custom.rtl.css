@@ -1,0 +1,88 @@
+.custom-owl {
+    direction: rtl;
+}
+
+#start_modal .modal-body button
+{
+    right: 0;
+    left: unset;
+}
+
+section#instructor_header .background
+{
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+.select-box .selected-option input {
+    padding-right: 10px;
+}
+
+.select-box .options::after {
+    right: 11px;
+    left: unset;
+}
+
+.search-nav .search .input-holder select
+{
+    background-position: left .75rem center;
+    direction: rtl;
+}
+.search-nav .search .input-holder::after
+{
+    right: 150px;
+    left: unset;
+}
+.search-nav .search select {
+    background-position: left .75rem center;
+}
+section.hero .left img {
+    transform: rotateY(0deg) !important;
+}
+
+.recorded-lessons .left .elements img {
+    transform: rotateY(0deg) !important;
+}
+.private-lessons .left img
+{
+    transform: rotateY(0deg) !important;
+}
+section.become-teacher img {
+    transform: rotateY(0deg) !important;
+}
+#mobile-menu select {
+    background-position: left .75rem center;
+}
+
+section.sign-up:has(.login-back) {
+    background-image: url(../image/login-textures.rtl.png);
+    background-position: bottom right;
+}
+section.sign-up:has(.register-back) {
+    background-image: url(../image/login-textures.png);
+    background-position: bottom left;
+}
+#about-us-platform-activities .left .special-background 
+{
+    right: 0;
+    left: unset;
+}
+#about-us-platform-activities .left .image-1 {
+    left: unset;
+    right: 13%;
+}
+#about-us-platform-activities .left .image-2 {
+    right: calc(13% + 200px);
+    left: unset;
+}
+#about-us-our-mission .right .special-background {
+    left: 0;
+    right: unset;
+}
+#about-us-our-mission .right .images-holder {
+    left: 10%;
+    right: unset;
+}
+#about-us-contact-us .right .special-background {
+    right: unset;
+    left: 0;
+}

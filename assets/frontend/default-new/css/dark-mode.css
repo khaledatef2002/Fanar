@@ -1,0 +1,650 @@
+.dark-theme{
+    --primary-color : #ddd;
+    --primary-color-2 : #6E798A;
+    --secondery-color : #000;
+    --bg-white : #292929;
+    --bg-white-2 : #121212;
+    --bg-white-3 : #ddd;
+    --bg-white-4 : #181528;
+    --bg-white-5 : #181528;
+    --bg-white-6 : #151515;
+    --bg-white-7 : #0B0718;
+    --color-1 : #ddd;
+    --color-2 : #0B0718;
+    --color-3 : #fff;
+    --color-4 : #0080FF;
+    --color-5 : #fff;
+    --color-6 : #fff;
+    --color-7 : #181528;
+    --color-8 : #fff;
+    --color-9 : #ffffff;
+    --color-10 :  #1E293B;
+    --color-11 :   #1E293B;
+    --color-12: #1E293B;
+    --color-13: #fff;
+    --color-14: #fff;
+    --color-15: #ffffff6b;
+    --color-16: #ffffff;
+    --hover-color :  #ddd;
+    --hover-color-2 :  #181528;
+    --border-color : #fff3;
+    --color-linear : #0B0718;
+    --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    --bs-dark-rgb: #fff;
+    background-color: #292929;
+}
+
+.dark-theme .navbar-custom {
+    background-color: #121212;
+    border-bottom: 1px solid white;
+}
+
+.dark-theme .navbar-custom .nav-link {
+    color: #676767;
+}
+.dark-theme nav.navbar.main-nav li a {
+    color: white;
+}
+.dark-theme .language-control select {
+    color: #676767;
+}
+.dark-theme .language-control select option {
+    background-color: #121212;
+    border: 0;
+}
+
+.dark-theme .bg-second, .dark-theme .cons {
+    background-color: #1e1e1e !important;
+}
+
+.dark-theme section.why .card {
+    color: white;
+}
+
+.dark-theme .recorded-lessons .container-fluid {
+    background-color: #121212;
+}
+
+.dark-theme section.why .card, .dark-theme section.download-app .container, .dark-theme section#upcomming .content, .dark-theme .footer {
+    background-color: #121212;
+}
+/* .dark-theme section#upcomming .live-lessons-records > div > li > p,
+.dark-theme section#upcomming .live-lessons-records > div > li > ul li p
+{
+    color: #606060 !important;
+}
+.dark-theme section#upcomming .live-lessons-records > div > li > div p
+{
+    color: #212529 !important;
+    } */
+.dark-theme section#upcomming .live-lessons-records > div > li
+{
+    background-color: #110915 !important;
+}
+.dark-theme .sub-category-menu {
+    background-color: #121212;
+}
+
+.dark-theme .footer {
+    border-top: 1px solid white;
+}
+/* Orange Nav */
+.dark-theme .search-nav 
+{
+    background-color: #121212;
+    color: #676767 !important;
+}
+.dark-theme .auth-buttons button.bg-white
+{
+    background-color: #e1e1e1 !important;
+}
+
+.dark-theme section.hero .left div.image-holder > div > div > p:first-of-type
+{
+    color: #1e1e1e !important
+}
+
+.dark-theme .list_of_tuitions_header {
+    background-color: #110915;
+}
+
+.dark-theme .list_of_tuitions_header .title {
+    color: #ffffff;
+}
+
+.dark-theme .sidebar-card {
+    background-color: #110915;
+}
+
+.dark-theme .bread-crumb {
+    background-color: #110915;
+}
+
+.dark-theme .sbundle-items .bundle-head .name
+{
+    color: #ffffff;
+}
+
+.dark-theme .auth-buttons button.bg-white {
+    color: #1e1e1e !important
+}
+.dark-theme .search-nav .search .input-holder::after
+{
+    background-color: #c1c1c1;
+}
+.dark-theme .search-nav .search .input-holder i, .dark-theme .search-nav .search select
+{
+    color: #676767;
+}
+/* Main Nav */
+.dark-theme nav.navbar.main-nav
+{
+    background-color: #2d2d2d;
+}
+.dark-theme nav.navbar.main-nav .nav-link
+{
+    color: #d9d9d9;
+}
+.dark-theme .navbar-nav .navbarHover li a:hover {
+    color: white;
+    background-color: #1e1e1e;
+}
+.dark-theme nav.navbar.main-nav div > ul > li:not(:last-of-type)::before, .dark-theme .navbar.main-nav div > ul > ul::before
+{
+    background-color: #121212;
+}
+
+.dark-theme .menu_pro_wish-f-b {
+    color: white !important;
+    background-color: #1e1e1e !important;
+}
+
+.dark-theme .menu_pro_tgl_bg ul li a {
+    color: white;
+}
+
+.dark-theme .cat-item, .dark-theme .subcat-item , .dark-theme .course-item {
+    background: #121212 !important;
+    color: #e1e1e1 !important;
+}
+
+.dark-theme .navbar-toggler i {
+    color: white;
+}
+.dark-theme .navbar-toggler:hover {
+    transform: translate(0);
+}
+.dark-theme .courses-card .courses-text p {
+    color: white !important;
+}
+.dark-theme .list-btn:hover, .dark-theme .list-btn.active {
+    color: white !important;
+}
+
+.dark-theme .list-btn {
+    color: #000 !important;
+}
+.dark-theme .sbundle-items {
+    background-color: #121212;
+}
+
+.dark-theme .sbundle-item .price {
+    color: white !important;
+}
+
+.dark-theme .sbundle-items .bundle-head .info {
+    color: #0080ff;
+}
+
+.dark-theme .modal-content {
+    background: #000000 !important;
+}
+.dark-theme .modal-content .modal-body {
+    background-color: #1e1e1e;
+}
+.dark-theme .s_Sidebar_title_one.s_bar::before {
+    background-color: #ffaa51;
+}
+
+.dark-theme .s_Sidebar_one {
+    background-color: #121212;
+}
+
+.dark-theme .ui-widget-content {
+    background: transparent;
+}
+
+.dark-theme .slider-control input, .dark-theme .separator {
+    background-color: transparent;
+    color: white;
+}
+.dark-theme .contact-page .form-btn button {
+    color: white;
+}
+
+.dark-theme ::placeholder {
+    color: rgb(168, 168, 168);
+    opacity: 1; /* Firefox */
+}
+  
+.dark-theme  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: rgb(168, 168, 168);
+}
+
+.dark-theme .table {
+    --bs-table-bg: #000;
+}
+.dark-theme button.btn-primary {
+    color: white;
+}
+
+.dark-theme .course-description h3.description-head {
+    color: white;
+}
+
+.dark-theme .course-decription li .nav-link svg path {
+    fill: white;
+}
+.dark-theme .course-decription li .nav-link.active svg path {
+    fill: #e29139;
+}
+
+.dark-theme .course-decription li .nav-link:hover svg path {
+    fill: var(--color-4);
+}
+
+.dark-theme .course-right-section .course-card .enrol .icon h4,.dark-theme .course-right-section .course-card .enrol > h5
+{
+    color: white;
+}
+
+.dark-theme .footer h1 {
+    color: white;
+}
+
+.dark-theme .course-left-side .accordion-item {
+    background-color: #110915;
+}
+
+.dark-theme .courses-card-image .courses-icon i 
+{
+    color: #ffffff;
+    background-color: #110915;
+}
+.dark-theme .courses-card {
+    background-color: #110915;
+}
+
+.dark-theme .tutor-details-header,
+.dark-theme .sRequest-lesson,
+.dark-theme .sNav-tabs,
+.dark-theme .tutor-tab-content .tab-pane {
+    background-color: #110915;
+}
+
+.dark-theme .tutor-details-header h4.title
+{
+    color: #fff !important;
+}
+
+.dark-theme .courses-card .courses-card-body {
+    background-color: #4a285b;
+    border: 0 !important;
+}
+.dark-theme .courses-card-image
+{
+    background-color: #47295c;
+    border-radius: 10px;
+}
+.dark-theme .courses-card-image img 
+{
+    border-radius: 15px !important;
+}
+
+.dark-theme .course-left-side .accordion-button {
+    background-color: #fff;
+    padding: 5px 0px 5px 40px;
+    border-radius: 5px;
+}
+
+.dark-theme .instructor .instructor-text h2 {
+    color: #fff;
+}
+
+.dark-theme .course-card {
+    background-color: #110915;
+}
+
+.dark-theme .bread-crumb h1 {
+    color: #ffffff;
+}
+
+.dark-theme .course-right-section .course-card .ammount h3 {
+    color: #ffffff;
+}
+
+.dark-theme .courses-details .courses-details-1st-text p, .dark-theme .course-heading-info .info-tag i, .dark-theme .created-by-instructor {
+    color: #b4b4b4;
+}
+
+.dark-theme section#instructor_header .content .triangle {
+    background-color: #292929;
+}
+
+.dark-theme section#instructor_header h1 {
+    color: #fff;
+}
+
+.dark-theme #what_you_search_about_us ul li {
+    color: #b9b9b9 !important;
+}
+
+.dark-theme .menu_pro_tgl_bg, .dark-theme .menu_pro_wish {
+    background-color: #121212;
+}
+
+.dark-theme .course-left-side .nav-tabs .nav-item.show .nav-link, .dark-theme .course-left-side .nav-tabs .nav-link.active 
+{
+    background-color: #47295c;
+}
+
+.dark-theme .course-left-side .accordion-button:hover {
+    transform: unset;
+}
+
+.dark-theme .menu_pro_wish .menu_pro_wish-flex .text P, .dark-theme .menu_pro_wish .menu_pro_wish-flex .text h4 {
+    color: white !important;
+}
+
+.dark-theme .course-decription #myTab {
+    background-color: #110915;
+}
+
+.dark-theme #shoppingCart table {
+    --bs-table-bg: transparent !important;
+}
+.dark-theme #shoppingCart table h4 {
+    color: white !important;
+}
+
+.dark-theme .select-box .options
+{
+    background: #303133 !important;
+}
+
+.dark-theme .select-box .options::after {
+    border-bottom-color: #303133;
+}
+
+.dark-theme .select-box .options {
+    color: #6e798a;
+}
+
+/* Hero */
+.dark-theme section.hero div.icons div {
+    background-color: #121212;
+    color: #e1e1e1;
+}
+.dark-theme section.hero div.icons div:hover {
+    background-color: #080808;
+}
+.dark-theme section#statistics {
+    background-color: #292929  !important;
+}
+
+.dark-theme .recorded-lessons .right h2
+{
+    color: #e1e1e1;
+}
+
+.dark-theme section#upcomming .live-lessons-records .live-lessons-record
+{
+    background-color: #292929;
+}
+
+.dark-theme section#upcomming ul.live-lessons-records > li {
+    background-color: #0c0c0c !important;
+    box-shadow: 0 0 3px 0 #343434;
+}
+.dark-theme section.save-more {
+    background-color: #110915;
+}
+.dark-theme section#upcomming {
+    background-color: #1e1e1e !important;
+}
+.dark-theme section.download-app
+{
+    background-color: #292929 !important;
+}
+
+.dark-theme #school_accordion .accordion-button
+{
+    background-color: #121212;
+    color: #e1e1e1;
+}
+
+.dark-theme #school_accordion .accordion-item
+{
+    background-color: #2d2d2d;
+}
+
+.dark-theme #school_accordion .accordion-item .subcat-item
+{
+    background-color: #121212;
+    color: #676767;   
+}
+
+.dark-theme .search-nav li a, .dark-theme .search-nav .auth-buttons a
+{
+    color: #676767 !important;
+}
+
+.dark-theme #about-us-platform-activities, .dark-theme #about-us-our-mission, .dark-theme #about-us-contact-us {
+    background-color: #181818 !important;
+}
+.dark-theme section.hero, .dark-theme div.statistics {
+    background-color: #2d2d2d;
+}
+
+.dark-theme nav.navbar.main-nav.floating-nav {
+    background-color: #121212;
+    border-bottom: 1px solid #878787;
+}
+
+.dark-theme section .header h1,
+.dark-theme section#upcomming ul.live-lessons-records > li > div:first-of-type p,
+.dark-theme .private-lessons .right h2,
+.dark-theme section.why .card h3    
+{
+    color: #ffffff;
+}
+
+.dark-theme section.why .card p {
+    color: #9b9b9b;
+}
+
+.dark-theme .recorded-lessons .recorded-footer > div:last-of-type h3,
+.dark-theme .recorded-lessons .recorded-footer > div:first-of-type ul li p 
+{
+    color: #bbbbbb;
+}
+
+.dark-theme #mobile-menu {
+    background-color: #110915;
+}
+.dark-theme #mobile-menu ul.social-media li a i {
+    color: #110915;
+}
+
+.dark-theme section.school-content .nav,.dark-theme section.school-content .tabs-container
+{
+    background-color: #1e1e1e;
+}
+
+.dark-theme .custom-nav .nav.nav-tabs .nav-link
+{
+    background: #121212;
+    color: #e4e4e4;
+}
+.dark-theme .custom-nav .nav.nav-tabs .nav-link.previous {
+    background: #00bf1f;
+}
+
+.dark-theme .custom-nav .nav.nav-tabs .nav-link.active {
+    background: #ff7468;
+}
+
+.dark-theme .sbundle-items .bundle-head .price .currency {
+    color: #fff !important;
+}
+.dark-theme .bundle-search-container {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .sign-up {
+    background-color: #2d2d2d;
+}
+
+.dark-theme .menu_pro_tgl_bg ul li a {
+    color: #fff !important;
+}
+.dark-theme .menu_pro_tgl_bg ul li:hover a {
+    color: #ff7468 !important;
+}
+.dark-theme nav.navbar.main-nav .menu_pro_tgl-2div i, .dark-theme nav.navbar.main-nav .menu_wisth_tgl
+{
+    color: #676767 !important;
+}
+
+.dark-theme #about-us-vision,
+.dark-theme #about-us-our-individuals{
+    background-color: #292929;
+}
+
+.dark-theme #about-us-platform-activities .left .special-background,
+.dark-theme #about-us-vision .right .visition-items-handler div:first-of-type
+{
+    background-color: #47295c;
+}
+.dark-theme #about-us-vision .right .visition-items-handler div:last-of-type {
+    background-color: #8e4640;
+}
+
+.dark-theme #about-us-our-individuals .items {
+    background-color: #121212;
+}
+
+.dark-theme #about-us-header {
+    background-color: #47295c;
+}
+
+.dark-theme #mobile-menu select {
+    color: #110915;
+}
+
+.dark-theme .sing-up-right {
+    background-color: #121212;
+}
+
+.dark-theme .sing-up-right > p,
+.dark-theme .sing-up-right form div:has( > input:not([type='checkbox']):not([type='radio'])) > label,
+.dark-theme .sing-up-right .forget-password,
+.dark-theme .sing-up-right .another p
+{
+    color: #b5b5b5 !important;
+}
+
+.dark-theme .select-box ol li, .dark-theme .selected-option #default-tel-code
+{
+    color: #c7c3c9;
+}
+
+.dark-theme .sing-up-right > h3,
+.dark-theme .sing-up-right .another p a
+{
+    color: #4b2d5f !important;
+}
+
+.dark-theme .sing-up-right .log-in .btn {
+    background-color: #4b2d5f !important;
+}
+
+.dark-theme nav.navbar.main-nav .auth-buttons #register-button button {
+    background-color: #4b2d5f;
+}
+
+.dark-theme .sing-up-right h5 {
+    color: #b5b5b5;
+}
+
+.dark-theme section#instructor_header {
+    background: #2d2d2d;
+}
+
+.dark-theme section#instructor_header button {
+    background-color: #4b2d5f;
+}
+.dark-theme section#change_student_life
+{
+    background-color: #1e1e1e;
+}
+
+.dark-theme section#change_student_life h2 {
+    color: #fff;
+}
+
+.dark-theme section#change_student_life button
+{
+    background-color: #4b2d5f;
+}
+
+.dark-theme #what_you_search_about_us .content {
+    background-color: #1e1e1e;
+}
+.dark-theme #what_you_search_about_us .content h2
+{
+    color: #fff;
+}
+.dark-theme #what_you_search_about_us .content i {
+    background-color: #4b2d5f;
+}
+.dark-theme #what_you_search_about_us .content button
+{
+    border: 1px solid #4b2d5f;
+    color: #4b2d5f;
+}
+.dark-theme #what_you_search_about_us .content button:hover {
+    background-color: #4b2d5f;
+    color: #fff;
+}
+.dark-theme #employment_process h2 {
+    color: #dfdfdf;
+}
+.dark-theme #employment_process .steps .step span {
+    background-color: #4b2d5f;
+}
+.dark-theme #employment_process .steps .line {
+    background-color: #4b2d5f;
+}
+.dark-theme #employment_process button {
+    background-color: #4b2d5f;
+}
+.dark-theme #instructor-feed-back {
+    background-color: #1e1e1e;
+}
+.dark-theme #instructor-feed-back p:first-of-type
+{
+    color: #fff;
+}
+.dark-theme #instructor-feed-back p:last-of-type {
+    color: #cbcbcb;
+}
+.dark-theme section#change_student_life button, #instructor-feed-back button {
+    background-color: #4b2d5f;
+}
+.dark-theme #teachers-q-a .accordion-item
+{
+    background-color: #4b2d5f;
+    border-color: #110915;
+    color: white;
+}
