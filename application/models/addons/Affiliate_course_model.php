@@ -26,7 +26,7 @@ class Affiliate_course_model extends CI_Model
     public function get_affiliate_course_table_info_by_user($user_id = "")
     {
 
-        return  $this->db->where(array('referee_id' => $user_id, 'type' => "course"))->order_by('date_added', 'DESC')->get('course_affiliation');
+        return  $this->db->where(array('referee_id' => $user_id))->order_by('date_added', 'DESC')->get('course_affiliation');
     }
 
     public function get_withdrawl_request_info_for_referral_course_amount($user_id = "")
@@ -147,12 +147,15 @@ class Affiliate_course_model extends CI_Model
     }
 
 
-    public function get_course_completed_affiliate_history_by_date_range($timestamp_start = "", $timestamp_end = "",$selected_user="")
+    public function get_course_completed_affiliate_history_by_date_range($timestamp_start = "", $timestamp_end = "",$selected_user="", $type = "")
     {
         $this->db->order_by('id', 'DESC');
         $this->db->where('date_added >=', $timestamp_start);
         $this->db->where('date_added <=', $timestamp_end);
-        $this->db->where('type', "course");   
+        if($type != "")
+        {
+            $this->db->where('type', $type);   
+        }
         if($selected_user!="")
         {
             $this->db->where('referee_id', $selected_user);

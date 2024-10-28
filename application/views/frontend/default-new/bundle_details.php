@@ -443,6 +443,18 @@
 			                        <?php else:?>
 			                            <a href="<?php echo site_url('course_bundles/buy/' . $bundle_details['id']); ?>"><i class="fas fa-credit-card"></i> <?php echo get_phrase('Buy subscription'); ?></a>
 			                        <?php endif?>
+									<?php if (addon_status('affiliate_course')) : // course_addon start  adding
+										$CI    = &get_instance();
+										$CI->load->model('addons/affiliate_course_model');
+										$is_affiliattor = $CI->affiliate_course_model->is_affilator($this->session->userdata('user_id'));
+										if ($is_affiliattor == 1) :
+											$user_data = $CI->affiliate_course_model->get__affiliator_status_table_info_by_user_id($this->session->userdata('user_id'));
+									?>
+
+											<a class="btn-custom_coursepage text-decoration-none fw-600 hover-shadow-1 d-inline-block" href="#myModel" data-bs-toggle="modal" data-bs-target="#myModel" id="shareBtn" data-bs-placement="top"><i class="fas fa-user-plus"></i> <?php echo site_phrase('Share and Earn'); ?></a>
+
+										<?php endif; ?>
+									<?php endif; ?>
 		                        </div>
 		                    </div>
 		                </div>
@@ -454,3 +466,7 @@
 	</div>
 </section>
 <!-- End Instructor -->
+<?php if (addon_status('affiliate_course') && $is_affiliattor == 1) : ?>
+    <?php include 'affiliate_bundle_modal.php';  // course_addon  single line /adding 
+    ?>
+<?php endif; ?>

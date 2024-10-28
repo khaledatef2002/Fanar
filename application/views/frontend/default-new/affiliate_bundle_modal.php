@@ -1,7 +1,7 @@
 <?php
 
 $CI    = &get_instance();
-$CI->load->model('addons/affiliate_course_model');
+$CI->load->model('addons/affiliate_bundle_model');
 
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
     $url = "https://";
@@ -11,14 +11,12 @@ else
 $url .= $_SERVER['HTTP_HOST'];
 
 
-$title = slugify($course_details['title']);
+$title = slugify($bundle_details['title']);
 
 
-$url = site_url("home/course/" . $title . "/" . $course_id);
+$url = site_url("bundle_details/" . $bundle_details['id'] . "/" . $title );
 
-
-
-$user_data = $CI->affiliate_course_model->get__affiliator_status_table_info_by_user_id($this->session->userdata('user_id'));
+$user_data = $CI->affiliate_bundle_model->get__affiliator_status_table_info_by_user_id($this->session->userdata('user_id'));
 
 if (isset($user_data['unique_identifier'])) :
     $ref = $user_data['unique_identifier'];

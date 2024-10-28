@@ -15,11 +15,6 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="mb-3 header-title"><?php echo get_phrase('list_of_Course Affiliation'); ?></h4>
-
-
-
-
-
                 </ul>
 
                 <div class="tab-content">
@@ -53,6 +48,15 @@
 
                                         </select>
                                     
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <select name="type" class="browser-default custom-select">
+                                            <option value="">All Afillates</option>
+                                            <option value="course">Courses</option>
+                                            <option value="bundle">Bundles</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -93,7 +97,14 @@
                                     $buyer_user_data = $this->db->get_where('users', array('id' => $table_info['buyer_id']))->row_array();
 
                                     $referee_user_data = $this->db->get_where('users', array('id' => $table_info['referee_id']))->row_array();
-                                    $course_name = $this->db->get_where('course', array('id' => $table_info['course_id']))->row_array();
+                                    if($table_info['type'] == 'course')
+                                    {
+                                        $course_name = $this->db->get_where('course', array('id' => $table_info['course_id']))->row_array();
+                                    }
+                                    else
+                                    {
+                                        $course_name = $this->db->get_where('course_bundle', array('id' => $table_info['course_id']))->row_array();
+                                    }
                                     $user_status=$this->db->get_where('affiliator_status', array('user_id' => $table_info['referee_id']))->row_array();
 
                                 ?>
@@ -103,18 +114,14 @@
 
                                         <td> <strong> <?php echo date('m/d/Y', $table_info['date_added']); ?></strong> </td>
 
-                                     <?php   if (isset($referee_user_data['id']) && isset($user_status['user_id'])) : ?>
-                                        <td> <strong> <?php echo  $referee_user_data['first_name']; ?></strong> 
+                                        <?php   if (isset($referee_user_data['id']) && isset($user_status['user_id'])) : ?>
+                                            <td> <strong> <?php echo  $referee_user_data['first_name']; ?></strong> 
 
                                         <?php else:?>
-
-                                               <span class="badge  badge-danger"><?php echo get_phrase('affiliator_deleted'); ?></span>
-
+                                            <span class="badge badge-danger"><?php echo get_phrase('affiliator_deleted'); ?></span>
                                         <?php endif;?>
                                   
                                         <?php 
-                                     
-                                    
                                         if (isset($user_status['status']) && $user_status['status'] == 1) : ?>
                                                     <small>
                                                         <p><?php echo get_phrase('status'); ?>: <span class="badge  badge-success"><?php echo get_phrase('active'); ?></span></p>
@@ -131,15 +138,18 @@
                                                 
                               
                                     </td>
-                                        <td> <strong> <?php echo  $course_name['title']; ?></strong> </td>
-                                        <td> <strong> <?php echo  $table_info['amount']; ?></strong> </td>
+                                    <td> 
+                                        <?php if($table_info['type'] == 'bundle'): ?>
+                                            <span class="badge badge-primary"><?php echo get_phrase('bundle'); ?></span>
+                                        <?php else: ?>
+                                            <span class="badge badge-primary"><?php echo get_phrase('course'); ?></span>
+                                        <?php endif; ?>
+                                        <strong> <?php echo  $course_name['title']; ?></strong> 
+                                    </td>
+                                    <td> <strong> <?php echo  $table_info['amount']; ?></strong> </td>
 
 
-                                        <td> <strong> <?php echo  $buyer_user_data['first_name']; ?></strong> </td>
-
-
-
-
+                                    <td> <strong> <?php echo  $buyer_user_data['first_name']; ?></strong> </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

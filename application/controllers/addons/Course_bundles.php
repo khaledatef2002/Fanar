@@ -66,6 +66,30 @@ class Course_bundles extends CI_Controller {
     }
 
     function bundle_details($bundle_id = ""){
+        # bundle aff addon
+        if (addon_status('affiliate_course')) {
+            if (isset($_GET['ref'])) {
+                $CI    = &get_instance();
+                $CI->load->model('addons/affiliate_bundle_model');
+                $affiliator_details_for_checking_active_status = $_GET['ref'];
+                $check_validity = $CI->affiliate_bundle_model->get_user_by_unique_identifier($affiliator_details_for_checking_active_status);
+ 
+                if ($check_validity && $check_validity['status'] == 1 && $check_validity['user_id'] != $this->session->userdata('user_id')) {
+
+                    if (isset($_GET['ref'])) {
+                        $this->session->set_userdata('bundle_referee', $_GET['ref']);
+                        $this->session->set_userdata('bundle_reffer_id', $bundle_id);
+                    } elseif ($this->session->userdata('user_id') != $bundle_id) {
+                        $this->session->unset_userdata('bundle_referee');
+                        $this->session->unset_userdata('bundle_reffer_id');
+                    }
+                } else {
+                    $this->session->set_flashdata('error_message', get_phrase('you can not reffer yourself'));
+                    redirect(site_url('home/courses'), 'refresh');
+                }
+            }
+        }
+
         if($bundle_id == "" || is_numeric($bundle_id) != true)
         redirect(site_url('course_bundles'), 'refresh');
 
@@ -227,6 +251,8 @@ class Course_bundles extends CI_Controller {
             $data['bundle_id'] = $payment_details['items'][0]['id'];
             $data['payment_method'] = $payment_method;
 
+
+
             if(isset($_GET['session_id'])){
                 $data['session_id'] = $_GET['session_id'];
             }
@@ -240,6 +266,53 @@ class Course_bundles extends CI_Controller {
 
             $this->db->insert('bundle_payment', $data);
             
+            $bundle_details = $this->course_bundle_model->get_bundle_details($data['bundle_id'])->row_array();
+
+            if (addon_status('affiliate_course')  && $this->session->userdata('course_referee') != "" && $this->session->userdata('course_reffer_id')) {
+                
+                if($data['amount'] == $bundle_details['price'])
+                {
+                    $aff['buying_amount'] = $bundle_details['price'];
+                    $aff['note'] = "actual price";
+                }
+                else
+                {
+                    $aff['buying_amount'] = $data['amount'];
+                    $aff['note'] = "coupon";
+                }
+
+            }
+
+            if (addon_status('affiliate_course')  && $this->session->userdata('course_referee') != "" && $this->session->userdata('course_reffer_id')) {
+
+                $aff['affiliate_amount'] = ceil(($aff['buying_amount'] *  get_settings('affiliate_addon_percentage')) / 100);
+                $data['amount'] = $data['amount'] - $aff['affiliate_amount'];
+            }
+
+            # bundle addon here
+            if (addon_status('affiliate_course')) :
+                if ($this->session->userdata('bundle_referee') != "" && $this->session->userdata('bundle_reffer_id')) {
+                    $CI    = &get_instance();
+                    $CI->load->model('addons/affiliate_bundle_model');
+                    $reffre_details_for_aff_table = $this->affiliate_bundle_model->get_user_by_their_unique_identifier($this->session->userdata('course_referee'));
+                    $reffre_details = $this->affiliate_bundle_model->get_userby_id($reffre_details_for_aff_table['user_id']);
+                    $course_affiliation['payment_id'] = $_GET['transaction_id'] ?? 0;
+                    $course_affiliation['type'] = "bundle";
+                    $course_affiliation['actual_amount'] = $aff['buying_amount'];
+                    $course_affiliation['amount'] = $aff['affiliate_amount'];
+                    $course_affiliation['note'] = $aff['note'];
+                    $course_affiliation['course_id'] = $this->session->userdata('bundle_reffer_id');
+                    $course_affiliation['percentage'] = get_settings('affiliate_addon_percentage');
+                    $course_affiliation['payment_type'] = $data['payment_method'];
+                    $course_affiliation['date_added'] = strtotime(date('D, d-M-Y'));
+                    $course_affiliation['buyer_id'] = $data['user_id'];
+                    $course_affiliation['referee_id'] = $reffre_details['id'];
+                    $this->db->insert('course_affiliation', $course_affiliation);
+                    $this->session->unset_userdata('bundle_referee');
+                    $this->session->unset_userdata('bundle_reffer_id');
+                }
+            endif;
+
             $this->session->set_userdata('payment_details', []);
             $this->session->set_flashdata('flash_message', site_phrase('payment_successfully_done'));
             redirect('home/my_bundles', 'refresh');

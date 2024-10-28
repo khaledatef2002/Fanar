@@ -173,9 +173,11 @@ if ($w->num_rows() > 0) {
                       $view = $te - $total_withdraw_amount;
                       if ($view > 0) :
                       ?>
+                      <div class="d-flex justify-content-between align-items-end">
                         <h3 class="mt-3"><span class="text-white"><i class="mdi mdi-arrow-down-bold"></i></span> <?php echo currency($view); ?></h3>
 
-                        <button style="float: right; margin-top: -21px;" type="button" class="btn btn-customwith" data-bs-toggle="modal" data-bs-target="#exampleModal"> Request a withdrawal </button>
+                        <button type="button" class="btn btn-customwith" data-bs-toggle="modal" data-bs-target="#exampleModal"> Request a withdrawal </button>
+                      </div>
 
                       <?php else :
                       ?>
@@ -222,7 +224,16 @@ if ($w->num_rows() > 0) {
                               foreach ($course_affiliation_tableinfo->result_array() as $each_history) : ?>
                                 <?php
                                 $user_name = $this->db->get_where('users', array('id' => $each_history['buyer_id']))->row_array();
-                                $course_name = $this->db->get_where('course', array('id' => $each_history['course_id']))->row_array();  ?> <tr>
+                                if($each_history['type'] == 'course')
+                                {
+                                  $course_name = $this->db->get_where('course', array('id' => $each_history['course_id']))->row_array();  
+                                }
+                                else
+                                {
+                                  $course_name = $this->db->get_where('course_bundle', array('id' => $each_history['course_id']))->row_array();  
+                                }
+                                ?> 
+                                <tr>
                                   <td class="min-width-180px">
                                     <div class="history-affi">
                                         <p><?php echo $course_name['title'] ?></p>

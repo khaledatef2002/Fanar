@@ -2407,3 +2407,55 @@ section.sign-up {
     color: #fe7569;
     font-size: 1.4em;
 }
+
+.affiliate_modal .modal-header
+{
+    background-color: #47295c;
+}
+.affiliate_modal .modal-content
+{
+    background-color: #f9f1ff;
+}
+.affiliate_modal .modal-content .field
+{
+    border-color: #fe7569;
+}
+.affiliate_modal .modal-content i
+{
+    color: #fe7569;
+}
+.affiliate_modal .modal-content input
+{
+    background: initial;
+    border: initial;
+    color: #fe7569;
+}
+.affiliate_modal .modal-header button
+{
+    background-color: #ff7468;
+    color: white;
+}
+.affiliate_modal .modal-body label
+{
+    color: #47295c;
+}
+.affiliate_modal .modal-body .input-group span
+{
+    background-color: #47295c !important;
+}
+.affiliate_modal .modal-body .input-group span i
+{
+    color: white !important;
+}
+.affiliate_modal .modal-body .input-group input
+{
+    background-color: initial !important;
+    border: 1px solid #47295c;
+    color: #47295c;
+}
+.affiliate_modal .modal-body button[type='submit']
+{
+    background-color: #ff7468 !important;
+    color: white !important;
+    border: 0 !important;
+}

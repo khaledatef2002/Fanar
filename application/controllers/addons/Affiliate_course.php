@@ -266,6 +266,7 @@ class Affiliate_course extends CI_Controller
             redirect(site_url('login'), 'refresh');
         }
         $selected_user = "";
+        $type = "";
         if ($param1 != '') {
             if (isset($_GET['dropdown_user'])) {
                 $selected_user = $_GET['dropdown_user'];
@@ -282,6 +283,11 @@ class Affiliate_course extends CI_Controller
             $page_data['timestamp_end'] = strtotime(date('m/t/Y')) + 86400;
         }
 
+        if(isset($_GET['type']))
+        {
+            $type = $_GET['type'];
+        }
+
         $all_affiliator_from_affliate_status_table = $this->affiliate_course_model->get_all_active_and_suspend_affiliators();
 
         $page_data['all_affiliator_id'] = $all_affiliator_from_affliate_status_table;
@@ -290,7 +296,7 @@ class Affiliate_course extends CI_Controller
         $page_data['page_name'] = 'course_affiliation_history';
         $page_data['page_title'] = get_phrase('course_affiliation_history');
 
-        $page_data['course_affiliation_table'] = $this->affiliate_course_model->get_course_completed_affiliate_history_by_date_range($page_data['timestamp_start'], $page_data['timestamp_end'], $selected_user);
+        $page_data['course_affiliation_table'] = $this->affiliate_course_model->get_course_completed_affiliate_history_by_date_range($page_data['timestamp_start'], $page_data['timestamp_end'], $selected_user, $type);
 
 
         $this->load->view('backend/index', $page_data);
